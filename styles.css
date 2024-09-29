@@ -456,6 +456,11 @@ header {
   align-items: center;
 }
 
+.slick-list-dragable div:hover{
+  background-color: rgb(81, 37, 37);
+  color: white;
+}
+
 .circles {
   height: 170px;
   width: 170px;
