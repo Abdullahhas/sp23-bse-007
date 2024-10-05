@@ -127,7 +127,71 @@ body {
   margin-left: -950px;
 }
 
+
+/* images slider section */
+
 .slider-images {
   height: 500px;
   width: 400px;
+}
+
+
+ 
+
+.products {
+  height: 500px;
+  width: 267px;
+  margin-right: -3px;
+  margin-left: 7px;
+}
+
+.products img {
+  height: 400px;
+}
+
+.products h3 {
+  padding-top: 5px;
+  padding-left: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.price {
+  color: #be1e2d;
+  padding-left: 20px;
+  font-weight: lighter;
+  font-size: large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-top: -10px;
+}
+
+.products h3 a {
+  text-decoration: none;
+  color: black;
+  
+}
+
+.circles{
+  height: 170px;
+  width: 170px;
+  background-color: pink;
+  border: 2px solid rgb(95, 129, 151);
+  display: flex;
+  align-items: center;
+
+}
+
+.circles a {
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  text-decoration: none;
+  padding-left: 28px;
+  
+  
+}
+
+.circles h2{
+  font-size: 25px;
 }
