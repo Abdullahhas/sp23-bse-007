@@ -127,16 +127,12 @@ body {
   margin-left: -950px;
 }
 
-
 /* images slider section */
 
 .slider-images {
   height: 500px;
   width: 400px;
 }
-
-
- 
 
 .products {
   height: 500px;
@@ -169,17 +165,15 @@ body {
 .products h3 a {
   text-decoration: none;
   color: black;
-  
 }
 
-.circles{
+.circles {
   height: 170px;
   width: 170px;
   background-color: pink;
   border: 2px solid rgb(95, 129, 151);
   display: flex;
   align-items: center;
-
 }
 
 .circles a {
@@ -188,10 +182,34 @@ body {
   color: white;
   text-decoration: none;
   padding-left: 28px;
-  
-  
 }
 
-.circles h2{
+.circles h2 {
   font-size: 25px;
 }
+
+.circles:hover{
+  background-color: rgb(81, 37, 37);
+  color: white;
+}
+
+
+.slider3 {
+  height: 470px;
+}
+
+.slider3 img {
+  width: 220px;
+  height: 300px;
+}
+
+.slider4 {
+
+  height: 340px;
+}
+
+.slider4 iframe {
+  height: 300px;
+  width: 220px;
+}
+
