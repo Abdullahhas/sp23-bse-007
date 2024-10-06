@@ -188,11 +188,10 @@ body {
   font-size: 25px;
 }
 
-.circles:hover{
+.circles:hover {
   background-color: rgb(81, 37, 37);
   color: white;
 }
-
 
 .slider3 {
   height: 470px;
@@ -204,7 +203,6 @@ body {
 }
 
 .slider4 {
-
   height: 340px;
 }
 
@@ -213,3 +211,45 @@ body {
   width: 220px;
 }
 
+.slider5 {
+  height: 400px;
+  width: 100%;
+}
+
+.slider5 img {
+  width: 300px;
+}
+
+.slider5 button {
+  position: absolute;
+  margin-top: -120px;
+  margin-left: 10px;
+  width: 280px;
+  height: 80px;
+  background-color: whitesmoke;
+  font-size: x-large;
+  border: whitesmoke;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  cursor: pointer;
+}
+
+.slider5 button:hover {
+  background-color: rgb(81, 37, 37);
+  color: white;
+}
+
+.section {
+  margin-top: 50px;
+  background-color: #ffdfd3;
+  height: 200px;
+  font-size: 17px;
+}
+.simply-return {
+  height: 50px;
+  padding-top: 7px;
+  width: 300px;
+}
+
+.Subscribe input {
+  margin-top: -10px;
+}
