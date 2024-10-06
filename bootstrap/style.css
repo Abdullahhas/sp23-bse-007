@@ -253,3 +253,96 @@ body {
 .Subscribe input {
   margin-top: -10px;
 }
+
+footer {
+  background-color: #f6f6f8;
+  height: 560px;
+}
+
+.footer {
+  height: 370px;
+  padding-top: 20px;
+}
+
+.footer h3 {
+  font-size: large;
+  margin-left: 35px;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.sec-1 {
+  height: 330px;
+  width: 270px;
+}
+
+.sec-2 {
+  height: 300px;
+  width: 270px;
+  margin-top: -22px;
+}
+
+.sec-3 {
+  height: 330px;
+  margin-top: 28px;
+  width: 290px;
+  margin-top: -1px;
+}
+
+.ulist {
+  margin-top: 15px;
+}
+
+.ulist li {
+  padding-top: 20px;
+}
+
+.logoalk {
+  width: 250px;
+  text-align: center;
+  margin-left: 140px;
+}
+
+.footer-second-sec {
+  height: 100px;
+  margin-top: -15px;
+}
+
+#seclogo {
+  height: 60px;
+}
+
+.footer-icons {
+  width: 200px;
+  height: 65px;
+  margin-right: 250px;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.third-footer-section {
+  height: 90px;
+}
+
+hr {
+  border: 1px solid orange;
+  width: 95%;
+  margin-left: 35px;
+}
+
+.payment {
+  width: 300px;
+  margin-right: 50px;
+}
+
+.copy-right {
+  margin-left: 30px;
+  width: 400px;
+}
+
+.payment img {
+  height: 40px;
+  width: 60px;
+}
