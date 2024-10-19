@@ -1,16 +1,17 @@
-const url = "https://api.github.com/users/mua22";
+const products = document.querySelectorAll('.products'); 
+let totalPrice = 0;
 
-let dat = async function sid() {
-    try {
-        let data = await fetch(url);
-        if (!data.ok) {
-            throw new Error(`HTTP error! status: ${data.status}`);
-        }
-        let res = await data.json();
-        console.log(res);
-    } catch (error) {
-        console.error("Error fetching data:", error);
-    }
-};
+const calculatePrice = () => {
+  products.forEach(product => { 
+    const priceElement = product.querySelector('.price'); 
+    product.addEventListener('click', () => {
+      // Remove 'pkr ' and any commas from the price text
+      const priceText = priceElement.innerHTML.replace('pkr ', '').replace(/,/g, '');
+      const priceNumber = parseInt(priceText); // Parse the price as an integer
+      totalPrice += priceNumber; // Add the price to totalPrice
+      console.log(`totalPrice is ${totalPrice}`); // Log the total price
+    });
+  });
+}
 
-sid();
+calculatePrice();
