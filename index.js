@@ -15,3 +15,18 @@ const calculatePrice = () => {
 }
 
 calculatePrice();
+
+
+const nameimage =  document.querySelectorAll('.products')
+
+const hovereff = ()=>{
+  nameimage.forEach(element => {
+    const a = element.querySelector('.products a')
+    element.addEventListener('mouseover' , ()=>{
+      const text = a.innerHTML;
+      console.log(text)
+    })
+  });
+}
+
+hovereff()
