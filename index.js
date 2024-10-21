@@ -19,13 +19,21 @@ calculatePrice();
 
 const nameimage =  document.querySelectorAll('.products')
 
-const hovereff = ()=>{
+const hovereff = () => {
   nameimage.forEach(element => {
-    const a = element.querySelector('.products a')
-    element.addEventListener('mouseover' , ()=>{
-      const text = a.innerHTML;
-      console.log(text)
-    })
+    const a = element.querySelector('.products a'); // Select the <a> tag
+    // const div = element.querySelector('.products div'); // Select the <div> tag
+
+    element.addEventListener('mouseover', () => {
+      if (a) {
+        const aText = a.innerHTML; // Get the inner HTML of <a>
+        console.log(`${aText}`);
+      }
+      // if (div) {
+      //   const divText = div.innerHTML; // Get the inner HTML of <div>
+      //   console.log(`${divText}`);
+      // }
+    });
   });
 }
 
