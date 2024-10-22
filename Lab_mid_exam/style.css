@@ -66,6 +66,11 @@ header {
     /* border-radius: 50%;  */
 }
 
+main{
+    background-color: wheat;
+    
+}
+
 .sec2 {
     display: flex;
     height: 300px;
