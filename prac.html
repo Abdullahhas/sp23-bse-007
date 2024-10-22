@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Sidebar Example</title>
+    <style>
+        /* General page styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            height: 100vh; /* Full height of the viewport */
+            width: 250px; /* Sidebar width */
+            position: fixed; /* Fixed sidebar */
+            top: 0;
+            left: -250px; /* Initially hidden */
+            background-color: #333;
+            transition: 0.3s; /* Smooth transition */
+            padding-top: 20px;
+        }
+
+        /* Show sidebar when active */
+        .sidebar.active {
+            left: 0; /* Slide in the sidebar */
+        }
+
+        /* Sidebar links */
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        /* Change color on hover */
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content */
+        .content {
+            margin-left: 0; /* No margin by default */
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+
+        /* Push content to the right when sidebar is active */
+        .content.shifted {
+            margin-left: 250px; /* Shift content when sidebar is active */
+        }
+
+        /* Toggle button */
+        .toggle-btn {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .toggle-btn:hover {
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toggle Button -->
+    <button class="toggle-btn" id="toggleBtn">Toggle Sidebar</button>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="content" id="content">
+        <h1>Main Content Area</h1>
+        <p>This is the area where your main content will go. You can toggle the sidebar using the button above.</p>
+    </div>
+
+    <script>
+        // Get elements
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+        const toggleBtn = document.getElementById('toggleBtn');
+
+        // Add click event to the toggle button
+        toggleBtn.addEventListener('click', function() {
+            // Toggle 'active' class on sidebar
+            sidebar.classList.toggle('active');
+            // Toggle 'shifted' class on content to push it when sidebar is active
+            content.classList.toggle('shifted');
+        });
+    </script>
+
+</body>
+</html>
