@@ -54,16 +54,16 @@ header {
     position: relative; /* Make this a positioned element to contain the absolute child */
     height: 350px;
     width: 350px;
-    border: 2px solid black;
-    border-radius: 50%;
+    /* border: 2px solid black; */
+    /* border-radius: 50%; */
     margin-top: 30px;
     margin-left: 30px;
 }
 
 .img img {
-    height: 250px;
+    height: 300px;
     width: 250px;
-    border-radius: 50%; /* Make sure the image is circular */
+    /* border-radius: 50%;  */
 }
 
 .sec2 {

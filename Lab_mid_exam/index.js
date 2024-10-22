@@ -1,10 +1,10 @@
-const pic = document.getElementsByClassName("img")[0]; // Get the first .img element
-const info = document.getElementsByClassName("info")[0]; // Get the first .info element
+const pic = document.getElementsByClassName("img")[0]; 
+const info = document.getElementsByClassName("info")[0]; 
 
 pic.addEventListener("mouseenter", () => {
-    info.style.display = "block"; // Show the info on mouse enter
+    info.style.display = "block"; 
 });
 
 pic.addEventListener("mouseleave", () => {
-    info.style.display = "none"; // Hide the info on mouse leave
+    info.style.display = "none"; 
 });
