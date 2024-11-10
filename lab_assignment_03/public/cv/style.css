@@ -1,0 +1,107 @@
+header {
+  background-color: antiquewhite;
+  height: 200px;
+  width: 100%;
+}
+
+.first-sec {
+  text-align: center;
+  color: green;
+}
+
+.first-sec h1 {
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+.prof {
+  padding-top: 15px;
+}
+
+.sec-section {
+  display: flex; 
+  flex-direction: column; 
+}
+
+.info {
+  margin: 10px;
+}
+
+.info {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  background-color: antiquewhite;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none; 
+  z-index: 1000; 
+  border: 2px solid black;
+}
+
+.main1 {
+  /* background-color: aqua; */
+  display: flex;
+}
+
+
+.same-sty{
+  margin-left: 550px;
+}
+
+.img {
+  position: relative; /* Make this a positioned element to contain the absolute child */
+  height: 350px;
+  width: 350px;
+  /* border: 2px solid black; */
+  /* border-radius: 50%; */
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.img img {
+  height: 300px;
+  width: 250px;
+  /* border-radius: 50%;  */
+}
+
+main{
+  background-color: wheat;
+  
+}
+
+.sec2 {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+}
+
+
+.objective div{
+  margin-right: 190px;
+}
+
+.workspace{
+  margin-left: 430px;
+}
+
+/* .sec2 div {
+  width: 50%;
+} */
+
+.sec-section a {
+  text-decoration: none;
+  color: black;
+}
+
+.Email {
+  margin-left: 80px;
+}
+
+
+.education{
+  width: 300px;
+  background-color: palegreen;
+  text-align: center;
+}
