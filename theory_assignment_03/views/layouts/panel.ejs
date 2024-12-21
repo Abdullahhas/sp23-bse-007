@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/styleforms.css">
+    
+
+ 
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+<style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Container */
+nav {
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Border for glass effect */
+    border-radius: 12px; /* Rounded corners */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styling */
+nav h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Menu */
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+}
+
+#menu li {
+    position: relative;
+}
+
+/* Menu Links */
+#menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+/* Hover Effects */
+#menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    color: #ffcc00;
+}
+
+/* Active State */
+#menu li a.active {
+    background-color: #ffcc00;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Icons in Menu */
+#menu li a i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+#menu li a:hover i {
+    transform: rotate(10deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav h2 {
+        margin-bottom: 15px;
+    }
+}
+</style>
+  </head>
+  <body>
+    <header class="bg-gradient py-4 shadow">
+      <nav>
+        <h2>Admin Panel</h2>
+          <%- include('../partials/top-menu') %>
+      </nav>
+  </header>
+    <main>
+      <%- body %>
+    </main>
+    
+    
+      
+  </body>
+</html>

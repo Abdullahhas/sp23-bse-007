@@ -1,0 +1,20 @@
+<form action="" method="POST" class="form-card my-5">
+  <h4>Update Product</h4>
+
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" value="<%= product.price %>" required />
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required><%= product.description %></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="src">Image URL:</label>
+    <textarea id="src" name="src" required><%= product.src %></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Update Product</button>
+</form>
