@@ -1,0 +1,247 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Header Styles */
+header nav {
+    background-color: #343a40;
+    padding: 1rem;
+    color: #ffffff;
+}
+
+header nav h2 {
+    margin: 0;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Table Styles */
+.product-table {
+    margin-top: 2rem;
+    width: 90%;
+    margin-left: 5%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.product-table th,
+.product-table td {
+    padding: 1.5rem;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+.product-table th {
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+}
+
+.product-table td {
+    background-color: #f9f9f9;
+}
+
+.product-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.product-table img {
+    border-radius: 8px;
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Button Alignment */
+.text-center {
+    text-align: center;
+}
+
+/* Gradient Background */
+.bg-gradient {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+}
+
+/* Form Card */
+.form-card {
+    max-width: 500px;
+    margin: auto;
+    background: linear-gradient(145deg, #ffffff, #f3f4f6);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1), -4px -4px 15px rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 20px 30px;
+}
+
+.form-card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Product Form Specific Styling */
+h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    color: #555;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form container */
+form.container {
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #f3f4f6;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+}
+
+/* Checkbox Styles */
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Submit Button Styling */
+.form-group button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-group button:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+    transform: translateY(-2px);
+}
+
+/* Hover Effects for Buttons */
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
