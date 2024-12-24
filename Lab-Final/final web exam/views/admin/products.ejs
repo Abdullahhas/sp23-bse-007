@@ -1,0 +1,189 @@
+<div style="
+  display: flex; 
+  justify-content: center; 
+  margin-bottom: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+">
+  <form action="/admin/products" method="get" style="
+    display: flex; 
+    align-items: center; 
+    gap: 15px; /* Slightly increased gap for better spacing */
+  ">
+    <!-- Search Input -->
+    <input
+      type="text"
+      name="search"
+      placeholder="Search by description..."
+      value="<%= searchQuery %>"
+      style="
+        padding: 12px 18px;
+        width: 300px; /* More spacious width */
+        border: 2px solid #ddd;
+        border-radius: 50px;
+        font-size: 16px;
+        outline: none;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        color: #333;
+      "
+      onfocus="this.style.borderColor='#218838'; this.style.boxShadow='0 2px 10px rgba(0, 128, 38, 0.3)';" 
+      onblur="this.style.borderColor='#ddd'; this.style.boxShadow='0 2px 10px rgba(0, 0, 0, 0.1)';"
+    />
+
+    <!-- Min Price Input -->
+    <input
+      type="number"
+      name="minPrice"
+      value="<%= minPrice %>"
+      placeholder="Min Price"
+      style="
+        padding: 12px 18px;
+        width: 180px; /* Optimized width for price input */
+        border: 2px solid #ddd;
+        border-radius: 50px;
+        font-size: 16px;
+        outline: none;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        color: #333;
+      "
+      onfocus="this.style.borderColor='#218838'; this.style.boxShadow='0 2px 10px rgba(0, 128, 38, 0.3)';" 
+      onblur="this.style.borderColor='#ddd'; this.style.boxShadow='0 2px 10px rgba(0, 0, 0, 0.1)';"
+    />
+
+   
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      style="
+        padding: 12px 20px;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        background: linear-gradient(to right, #28a745, #218838);
+        color: #fff;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      "
+      onmouseover="this.style.background='linear-gradient(to right, #218838, #28a745)'; this.style.boxShadow='0 6px 10px rgba(0, 128, 38, 0.2)';"
+      onmouseout="this.style.background='linear-gradient(to right, #28a745, #218838)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';"
+    >
+      Search
+    </button>
+  </form>
+
+  <form action="/admin/products" method="get" style="
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+  ">
+    <label for="sort" style="font-size: 16px; font-weight: bold; margin-right: 10px; margin-left: 20px;">Sort by:</label>
+    <select name="sort" id="sort" style="
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 50px;
+      font-size: 16px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    ">
+      <option value="price" <%= sortField === "price" ? "selected" : "" %>>Price</option>
+      <option value="description" <%= sortField === "description" ? "selected" : "" %>>Description</option>
+      <option value="createdAt" <%= sortField === "createdAt" ? "selected" : "" %>>Date</option>
+    </select>
+    <select name="order" id="order" style="
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 50px;
+      font-size: 16px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    ">
+      <option value="asc" <%= sortOrder === 1 ? "selected" : "" %>>Ascending</option>
+      <option value="desc" <%= sortOrder === -1 ? "selected" : "" %>>Descending</option>
+    </select>
+    <button type="submit" style="
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(to right, #007bff, #0056b3);
+      color: #fff;
+      transition: all 0.3s ease;
+    ">
+      Sort
+    </button>
+  </form>
+</div>
+
+
+
+
+<table class="product-table">
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Category</th> 
+      <th>Picture</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% for( let index = 0; index < products.length; index++ ) { %>
+      <tr>
+        <td><%= products[index].price %></td>
+        <td><%= products[index].description %></td>
+        <td><%= products[index].category && products[index].category.name ? products[index].category.name : 'No category' %></td>
+ 
+       
+        <td><img src="/<%= products[index].picture %>" width="100px"/> </td>
+        <td>
+          <a href="/admin/products/edit/<%= products[index]._id %>" class="btn btn-warning">Edit</a>
+          <a href="/admin/products/delete/<%= products[index]._id %>" class="btn btn-danger">Delete</a>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<div class="text-center mt-4 mb-5">
+  <a href="/admin/products/create" class="btn btn-primary btn-lg">Add New Product</a>
+</div>
+
+<!-- Pagination -->
+<nav aria-label="Page navigation" class="mt-4 d-flex justify-content-center">
+  <ul class="pagination">
+    <!-- Previous Button -->
+    <li class="page-item <%= page === 1 ? 'disabled' : '' %>">
+      <a class="page-link" href="/admin/products/<%= page - 1 %>" aria-disabled="<%= page === 1 ? 'true' : 'false' %>">
+        Previous
+      </a>
+    </li>
+
+    <!-- Page Numbers -->
+    <% for (let i = 1; i <= totalPages; i++) { %>
+      <li class="page-item <%= page === i ? 'active' : '' %>">
+        <a class="page-link" href="/admin/products/<%= i %>"><%= i %></a>
+      </li>
+    <% } %>
+
+    <!-- Next Button -->
+    <li class="page-item <%= page === totalPages ? 'disabled' : '' %>">
+      <a class="page-link" href="/admin/products/<%= page + 1 %>" aria-disabled="<%= page === totalPages ? 'true' : 'false' %>">
+        Next
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+

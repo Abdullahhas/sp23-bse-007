@@ -330,18 +330,30 @@
       </div>
     </header>
     <!--header section ends here-->
+<!-- 
+    <ul>
+      <li><a href="/admin/categories/men" class="same">MEN</a></li>
+      <li><a href="/admin/categories/women" class="same">WOMEN</a></li>
+      <li><a href="/admin/categories/kids" class="same">KIDS</a></li>
+     
+    </ul>
+     -->
 
     <main id="products">
       <% prods.forEach(product => { %>
         <div class="product">
-          <img src="/<%=product.picture %>" alt="<%= product.description %>">
-
+          <img src="/<%= product.picture %>" alt="<%= product.description %>">
           <p><%= product.description %></p>
           <p>Price: <%= product.price %></p>
-          <button 
-        onclick="addToWishlist('<%= product._id %>')">Add to Wishlist</button>
           
+          <form action="/add-to-cart/<%= product._id %>" method="POST">
+            <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+           
           
+          </form>
+          <a href="/wishlist/add/<%= product._id %>" class="btn btn-primary wishlist-btn">
+            Add to Wishlist
+        </a>
         </div>
       <% }) %>
     </main>
@@ -452,8 +464,6 @@
       </div>
     </footer>
 
-    <script>
-      
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

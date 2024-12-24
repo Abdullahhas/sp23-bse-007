@@ -1,0 +1,23 @@
+<main id="wishlist" class="container my-5">
+    <h1 class="text-center mb-4">Your Wishlist</h1>
+    <% if (wishlist.length > 0) { %>
+        <div class="row">
+            <% wishlist.forEach(product => { %>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/<%= product.picture %>" class="card-img-top" alt="<%= product.description %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= product.description %></h5>
+                            <p class="card-text">Price: <strong>$<%= product.price %></strong></p>
+                            <a href="/wishlist/remove/<%= product._id %>" class="btn btn-danger w-100">
+                                Remove from Wishlist
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    <% } else { %>
+        <p class="text-center text-muted">Your wishlist is empty.</p>
+    <% } %>
+</main>

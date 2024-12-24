@@ -11,8 +11,8 @@ const userSchema =  new mongoose.Schema({
         enum: ["admin", "editor", "user"], // Allowed roles
         default: "user",
       },
-
+ 
 })
 
-const user =  mongoose.model ('user' , userSchema)
+const user =  mongoose.model ('user' , userSchema) 
 module.exports = user 
